@@ -1,4 +1,9 @@
+"use client"
+import React from "react"
+
 import Image from "next/image"
+
+
 import { Baby, Heart, Users, Utensils, Shield, BookOpen } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
@@ -6,79 +11,127 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function StuntingLandingPage() {
   const faqData = [
+  // FAQ yang sudah ada sebelumnya
+
   {
-    id: "ciri-anak-stunting",
+    id: "what-is-stunting",
+    question: "Apakah itu stunting?",
+    answer:
+      "Stunting adalah kondisi gagal tumbuh pada anak balita akibat kekurangan gizi kronis dan infeksi berulang, terutama pada 1000 Hari Pertama Kehidupan (HPK). Kondisi ini ditandai dengan panjang atau tinggi badan anak yang berada di bawah standar usianya.",
+  },
+  
+  {
+    id: "prevention-pregnancy",
+    question: "Bagaimana mencegah stunting sejak kehamilan?",
+    answer:
+      "Pencegahan stunting dimulai sejak masa kehamilan dengan: 1) Konsumsi makanan bergizi seimbang yang kaya protein, zat besi, asam folat, dan kalsium. 2) Rutin memeriksakan kehamilan ke tenaga kesehatan. 3) Konsumsi tablet tambah darah sesuai anjuran dokter. 4) Hindari rokok, alkohol, dan zat berbahaya lainnya. 5) Jaga kebersihan diri dan lingkungan. 6) Kelola stress dengan baik dan istirahat yang cukup.",
+  },
+  {
+    id: "nutrition-1000-days",
+    question: "Apa saja nutrisi penting selama 1000 hari pertama?",
+    answer:
+      "Nutrisi penting dalam 1000 hari pertama kehidupan meliputi: 1) Protein untuk pertumbuhan sel dan jaringan. 2) Zat besi untuk mencegah anemia dan mendukung perkembangan otak. 3) Kalsium untuk pembentukan tulang dan gigi. 4) Vitamin A untuk kesehatan mata dan sistem imun. 5) Asam folat untuk perkembangan sistem saraf. 6) Omega-3 untuk perkembangan otak. 7) Zinc untuk pertumbuhan dan sistem imun.",
+  },
+  {
+    id: "breastfeeding-role",
+    question: "Bagaimana peran ASI dalam mencegah stunting?",
+    answer:
+      "ASI berperan vital dalam mencegah stunting karena: 1) Mengandung nutrisi lengkap dan mudah diserap tubuh bayi. 2) Memberikan antibodi untuk melindungi dari infeksi. 3) Mendukung perkembangan sistem pencernaan yang sehat. 4) ASI eksklusif 6 bulan pertama memberikan nutrisi optimal. 5) Dilanjutkan hingga 2 tahun dengan makanan pendamping yang tepat. 6) Bonding antara ibu dan bayi yang mendukung perkembangan emosional.",
+  },
+  {
+    id: "complementary-feeding",
+    question: "Kapan dan bagaimana memberikan MPASI yang tepat?",
+    answer:
+      "MPASI (Makanan Pendamping ASI) diberikan mulai usia 6 bulan dengan prinsip: 1) Tepat waktu: dimulai saat bayi berusia 6 bulan. 2) Tepat jumlah: porsi sesuai usia dan kebutuhan. 3) Tepat tekstur: dari halus bertahap ke kasar. 4) Tepat variasi: beragam jenis makanan untuk nutrisi lengkap. 5) Tepat kebersihan: selalu dalam kondisi higienis. 6) Responsive feeding: perhatikan tanda lapar dan kenyang bayi.",
+  },
+  {
+    id: "growth-monitoring",
+    question: "Mengapa penting memantau pertumbuhan anak secara rutin?",
+    answer:
+      "Pemantauan pertumbuhan rutin penting karena: 1) Mendeteksi dini gangguan pertumbuhan termasuk stunting. 2) Memastikan anak tumbuh sesuai kurva pertumbuhan normal. 3) Evaluasi efektivitas pemberian nutrisi. 4) Mendapat intervensi tepat waktu jika ada masalah. 5) Monitoring dilakukan di Posyandu, Puskesmas, atau fasilitas kesehatan. 6) Pencatatan dalam KMS (Kartu Menuju Sehat) untuk tracking jangka panjang.",
+  },
+  {
+    id: "environmental-factors",
+    question: "Bagaimana lingkungan mempengaruhi risiko stunting?",
+    answer:
+      "Faktor lingkungan yang mempengaruhi stunting: 1) Sanitasi buruk meningkatkan risiko infeksi dan diare. 2) Air bersih yang tidak memadai menyebabkan penyakit. 3) Polusi udara mengganggu kesehatan pernapasan. 4) Kemiskinan membatasi akses nutrisi berkualitas. 5) Pendidikan orang tua mempengaruhi pola asuh. 6) Akses layanan kesehatan yang terbatas. 7) Praktik kebersihan yang kurang baik di rumah tangga.",
+  },
+
+  // --- Tambahan FAQ Baru ---
+
+  {
+    id: "stunting-characteristics",
     question: "Bagaimana ciri-ciri anak yang terkena stunting?",
     answer:
-      "Ciri-ciri anak stunting meliputi tinggi badan yang lebih pendek dari anak seusianya, wajah tampak lebih muda, berat badan rendah, serta perkembangan motorik dan kognitif yang lebih lambat.",
+      "Ciri utama anak stunting adalah tinggi badannya lebih pendek dari standar anak seusianya. Tanda lainnya bisa berupa pertumbuhan yang melambat, berat badan sulit naik, dan performa buruk pada tes perhatian dan memori belajar. Deteksi pasti dilakukan dengan membandingkan data pertumbuhan anak dengan kurva pertumbuhan standar di Posyandu atau Puskesmas.",
   },
   {
-    id: "stunting-keluarga-miskin",
-    question: "Apakah stunting hanya terjadi pada keluarga miskin?",
-    answer:
-      "Tidak. Meski lebih sering terjadi di keluarga dengan ekonomi rendah, stunting juga dapat terjadi pada keluarga mampu jika pola makan, kebersihan, dan pola asuh anak kurang diperhatikan.",
-  },
-  {
-    id: "penanganan-stunting",
-    question: "Bagaimana penanganan stunting?",
-    answer:
-      "Penanganan stunting melibatkan pemberian nutrisi seimbang, perbaikan sanitasi dan kebersihan, pemantauan pertumbuhan secara rutin, serta edukasi kepada orang tua tentang pola asuh dan pemberian makan yang tepat.",
-  },
-  {
-    id: "anak-pendek-stunting",
+    id: "short-vs-stunted",
     question: "Apakah anak pendek selalu stunting?",
     answer:
-      "Tidak selalu. Anak pendek bisa disebabkan oleh faktor genetik. Namun, jika tinggi badannya jauh di bawah rata-rata usia dan disertai masalah perkembangan, bisa jadi itu merupakan tanda stunting.",
+      "Tidak. Anak pendek bisa disebabkan oleh faktor genetik (keturunan). Perbedaannya, stunting adalah kondisi gagal tumbuh akibat kekurangan gizi yang berdampak pada perkembangan kognitifnya. Anak pendek karena genetik tetap tumbuh proporsional dan memiliki perkembangan kognitif yang normal.",
   },
   {
-    id: "anak-stunting-normal",
-    question: "Apakah anak yang mengalami stunting bisa kembali normal?",
-    answer:
-      "Pemulihan penuh sulit dilakukan setelah usia 2 tahun, namun intervensi gizi, stimulasi, dan perawatan kesehatan yang tepat dapat membantu memperbaiki kualitas hidup dan tumbuh kembang anak secara signifikan.",
-  },
-  {
-    id: "kesadaran-masyarakat",
-    question: "Bagaimana cara meningkatkan kesadaran masyarakat tentang stunting?",
-    answer:
-      "Edukasi melalui posyandu, kampanye publik, penyuluhan ibu hamil, serta kolaborasi dengan tokoh masyarakat dapat membantu meningkatkan pemahaman dan kesadaran kolektif akan pentingnya pencegahan stunting.",
-  },
-  {
-    id: "dampak-stunting",
+    id: "stunting-impacts",
     question: "Dampak apa yang akan terjadi pada anak bila stunting?",
     answer:
-      "Anak yang mengalami stunting berisiko mengalami keterlambatan belajar, penurunan daya tahan tubuh, gangguan perkembangan otak, serta kesulitan bersaing di masa depan secara fisik maupun intelektual.",
+      "Dampak stunting tidak hanya fisik (pendek), tetapi juga meliputi: 1) Gangguan perkembangan otak yang menyebabkan penurunan kecerdasan. 2) Menurunnya kemampuan belajar dan produktivitas di masa depan. 3) Meningkatnya risiko menderita penyakit tidak menular (seperti diabetes dan penyakit jantung) saat dewasa.",
   },
   {
-    id: "stunting-disembuhkan",
-    question: "Apakah stunting dapat disembuhkan dan pertumbuhan anak dapat kembali normal?",
+    id: "can-stunting-be-cured",
+    question: "Apakah anak yang mengalami stunting bisa kembali normal?",
     answer:
-      "Stunting sulit disembuhkan sepenuhnya jika sudah lewat usia 2 tahun. Namun, dengan perbaikan nutrisi dan stimulasi yang konsisten, anak tetap bisa tumbuh lebih sehat dan produktif.",
+      "Stunting dapat diperbaiki, namun peluang kembali normal sangat bergantung pada usia anak. Intervensi gizi dan stimulasi yang dilakukan sebelum anak berusia 2 tahun (periode emas) memberikan peluang terbaik untuk mengejar ketertinggalan pertumbuhan. Setelah usia 2 tahun, dampak stunting, terutama pada otak, menjadi lebih sulit diperbaiki.",
   },
   {
-    id: "apa-itu-stunting",
-    question: "Apa itu stunting?",
+    id: "stunting-treatment",
+    question: "Bagaimana penanganan stunting?",
     answer:
-      "Stunting adalah kondisi gagal tumbuh pada anak balita akibat kekurangan gizi kronis, terutama dalam 1000 hari pertama kehidupan, yang menyebabkan tinggi badan di bawah standar dan gangguan perkembangan.",
+      "Penanganan berfokus pada intervensi gizi untuk mengejar ketertinggalan tumbuh kembang. Ini meliputi: 1) Pemberian asupan gizi yang adekuat, terutama kaya protein hewani. 2) Mengatasi penyakit infeksi yang diderita. 3) Memberikan stimulasi psikososial yang tepat. 4) Rutin memantau pertumbuhan di fasilitas kesehatan untuk evaluasi.",
   },
   {
-    id: "pencegahan-kehamilan",
-    question: "Bagaimana pencegahan stunting pada masa kehamilan?",
+    id: "not-only-poor",
+    question: "Apakah stunting hanya terjadi pada keluarga miskin?",
     answer:
-      "Pencegahan saat hamil mencakup konsumsi gizi lengkap, rutin periksa kehamilan, minum tablet tambah darah, hindari zat berbahaya seperti rokok dan alkohol, serta menjaga kesehatan mental dan fisik ibu.",
+      "Tidak. Meskipun kemiskinan adalah faktor risiko karena membatasi akses ke gizi, stunting bisa terjadi di keluarga mampu. Faktor lain seperti kurangnya pengetahuan gizi, pola asuh yang salah, seringnya anak sakit karena sanitasi buruk, dan tidak rutin ke Posyandu juga merupakan penyebab penting.",
   },
   {
-    id: "faktor-paling-berpengaruh",
+    id: "most-influential-factor",
     question: "Faktor apa yang paling berpengaruh terhadap terjadinya stunting?",
     answer:
-      "Faktor utama penyebab stunting adalah kekurangan gizi jangka panjang, pola makan yang tidak sesuai usia, infeksi berulang, sanitasi buruk, dan kurangnya pengetahuan orang tua tentang perawatan anak.",
+      "Faktor yang paling berpengaruh adalah asupan gizi yang tidak memadai dan infeksi berulang. Ini dipengaruhi oleh berbagai hal, seperti kesehatan ibu saat hamil, praktik pemberian ASI dan MPASI yang kurang tepat, kebersihan lingkungan, serta terbatasnya akses ke layanan kesehatan.",
   },
   {
-    id: "peran-posyandu",
+    id: "posyandu-role",
     question: "Apa peran Posyandu dalam pencegahan stunting?",
     answer:
-      "Posyandu memiliki peran penting dalam memantau pertumbuhan anak, memberikan imunisasi, edukasi gizi kepada ibu, mendeteksi dini masalah kesehatan, serta menghubungkan masyarakat dengan layanan kesehatan.",
+      "Posyandu berperan sebagai garda terdepan untuk: 1) Memantau pertumbuhan anak secara rutin (timbang berat dan ukur tinggi badan). 2) Memberikan edukasi gizi kepada ibu hamil dan balita. 3) Melakukan deteksi dini jika ada tanda gangguan pertumbuhan dan merujuk ke Puskesmas. 4) Memberikan layanan kesehatan dasar seperti imunisasi dan vitamin A.",
   },
-]
+  {
+    id: "raising-awareness",
+    question: "Bagaimana cara meningkatkan kesadaran masyarakat tentang stunting?",
+    answer:
+      "Kesadaran dapat ditingkatkan melalui: 1) Edukasi berkelanjutan di Posyandu dan Puskesmas. 2) Kampanye media massa dan digital yang mudah dipahami. 3) Pelibatan tokoh masyarakat dan agama sebagai panutan. 4) Memastikan informasi stunting mudah diakses oleh semua lapisan masyarakat.",
+  },
+];
+
+  const handleFindNearbyPuskesmas = () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords
+        const mapsUrl = `https://www.google.com/maps/search/puskesmas/@${latitude},${longitude},15z`
+        window.open(mapsUrl, "_blank") // buka di tab baru
+      },
+      (error) => {
+        alert("Gagal mendapatkan lokasi. Pastikan izin lokasi diaktifkan.")
+        console.error(error)
+      }
+    )
+  } else {
+    alert("Browser tidak mendukung fitur lokasi.")
+  }
+}
 
 
   return (
@@ -187,9 +240,30 @@ export default function StuntingLandingPage() {
               bayi.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3">
-                Cari Puskesmas Terdekat
-              </Button>
+              <Button
+  size="lg"
+  className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3"
+  onClick={handleFindNearbyPuskesmas}
+>
+  Cari Puskesmas Terdekat
+</Button>
+
+<Button
+    size="lg"
+    variant="outline"
+  className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3"
+  >
+    Kritik & Saran
+  </Button>
+
+  <Button
+    size="lg"
+    variant="outline"
+  className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3"
+  >
+    Konsultasi Kesehatan Online
+  </Button>
+
              
             </div>
           </div>
