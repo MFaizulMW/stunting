@@ -6,43 +6,80 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function StuntingLandingPage() {
   const faqData = [
-    {
-      id: "prevention-pregnancy",
-      question: "Bagaimana mencegah stunting sejak kehamilan?",
-      answer:
-        "Pencegahan stunting dimulai sejak masa kehamilan dengan: 1) Konsumsi makanan bergizi seimbang yang kaya protein, zat besi, asam folat, dan kalsium. 2) Rutin memeriksakan kehamilan ke tenaga kesehatan. 3) Konsumsi tablet tambah darah sesuai anjuran dokter. 4) Hindari rokok, alkohol, dan zat berbahaya lainnya. 5) Jaga kebersihan diri dan lingkungan. 6) Kelola stress dengan baik dan istirahat yang cukup.",
-    },
-    {
-      id: "nutrition-1000-days",
-      question: "Apa saja nutrisi penting selama 1000 hari pertama?",
-      answer:
-        "Nutrisi penting dalam 1000 hari pertama kehidupan meliputi: 1) Protein untuk pertumbuhan sel dan jaringan. 2) Zat besi untuk mencegah anemia dan mendukung perkembangan otak. 3) Kalsium untuk pembentukan tulang dan gigi. 4) Vitamin A untuk kesehatan mata dan sistem imun. 5) Asam folat untuk perkembangan sistem saraf. 6) Omega-3 untuk perkembangan otak. 7) Zinc untuk pertumbuhan dan sistem imun.",
-    },
-    {
-      id: "breastfeeding-role",
-      question: "Bagaimana peran ASI dalam mencegah stunting?",
-      answer:
-        "ASI berperan vital dalam mencegah stunting karena: 1) Mengandung nutrisi lengkap dan mudah diserap tubuh bayi. 2) Memberikan antibodi untuk melindungi dari infeksi. 3) Mendukung perkembangan sistem pencernaan yang sehat. 4) ASI eksklusif 6 bulan pertama memberikan nutrisi optimal. 5) Dilanjutkan hingga 2 tahun dengan makanan pendamping yang tepat. 6) Bonding antara ibu dan bayi yang mendukung perkembangan emosional.",
-    },
-    {
-      id: "complementary-feeding",
-      question: "Kapan dan bagaimana memberikan MPASI yang tepat?",
-      answer:
-        "MPASI (Makanan Pendamping ASI) diberikan mulai usia 6 bulan dengan prinsip: 1) Tepat waktu: dimulai saat bayi berusia 6 bulan. 2) Tepat jumlah: porsi sesuai usia dan kebutuhan. 3) Tepat tekstur: dari halus bertahap ke kasar. 4) Tepat variasi: beragam jenis makanan untuk nutrisi lengkap. 5) Tepat kebersihan: selalu dalam kondisi higienis. 6) Responsive feeding: perhatikan tanda lapar dan kenyang bayi.",
-    },
-    {
-      id: "growth-monitoring",
-      question: "Mengapa penting memantau pertumbuhan anak secara rutin?",
-      answer:
-        "Pemantauan pertumbuhan rutin penting karena: 1) Mendeteksi dini gangguan pertumbuhan termasuk stunting. 2) Memastikan anak tumbuh sesuai kurva pertumbuhan normal. 3) Evaluasi efektivitas pemberian nutrisi. 4) Mendapat intervensi tepat waktu jika ada masalah. 5) Monitoring dilakukan di Posyandu, Puskesmas, atau fasilitas kesehatan. 6) Pencatatan dalam KMS (Kartu Menuju Sehat) untuk tracking jangka panjang.",
-    },
-    {
-      id: "environmental-factors",
-      question: "Bagaimana lingkungan mempengaruhi risiko stunting?",
-      answer:
-        "Faktor lingkungan yang mempengaruhi stunting: 1) Sanitasi buruk meningkatkan risiko infeksi dan diare. 2) Air bersih yang tidak memadai menyebabkan penyakit. 3) Polusi udara mengganggu kesehatan pernapasan. 4) Kemiskinan membatasi akses nutrisi berkualitas. 5) Pendidikan orang tua mempengaruhi pola asuh. 6) Akses layanan kesehatan yang terbatas. 7) Praktik kebersihan yang kurang baik di rumah tangga.",
-    },
-  ]
+  {
+    id: "ciri-anak-stunting",
+    question: "Bagaimana ciri-ciri anak yang terkena stunting?",
+    answer:
+      "Ciri-ciri anak stunting meliputi tinggi badan yang lebih pendek dari anak seusianya, wajah tampak lebih muda, berat badan rendah, serta perkembangan motorik dan kognitif yang lebih lambat.",
+  },
+  {
+    id: "stunting-keluarga-miskin",
+    question: "Apakah stunting hanya terjadi pada keluarga miskin?",
+    answer:
+      "Tidak. Meski lebih sering terjadi di keluarga dengan ekonomi rendah, stunting juga dapat terjadi pada keluarga mampu jika pola makan, kebersihan, dan pola asuh anak kurang diperhatikan.",
+  },
+  {
+    id: "penanganan-stunting",
+    question: "Bagaimana penanganan stunting?",
+    answer:
+      "Penanganan stunting melibatkan pemberian nutrisi seimbang, perbaikan sanitasi dan kebersihan, pemantauan pertumbuhan secara rutin, serta edukasi kepada orang tua tentang pola asuh dan pemberian makan yang tepat.",
+  },
+  {
+    id: "anak-pendek-stunting",
+    question: "Apakah anak pendek selalu stunting?",
+    answer:
+      "Tidak selalu. Anak pendek bisa disebabkan oleh faktor genetik. Namun, jika tinggi badannya jauh di bawah rata-rata usia dan disertai masalah perkembangan, bisa jadi itu merupakan tanda stunting.",
+  },
+  {
+    id: "anak-stunting-normal",
+    question: "Apakah anak yang mengalami stunting bisa kembali normal?",
+    answer:
+      "Pemulihan penuh sulit dilakukan setelah usia 2 tahun, namun intervensi gizi, stimulasi, dan perawatan kesehatan yang tepat dapat membantu memperbaiki kualitas hidup dan tumbuh kembang anak secara signifikan.",
+  },
+  {
+    id: "kesadaran-masyarakat",
+    question: "Bagaimana cara meningkatkan kesadaran masyarakat tentang stunting?",
+    answer:
+      "Edukasi melalui posyandu, kampanye publik, penyuluhan ibu hamil, serta kolaborasi dengan tokoh masyarakat dapat membantu meningkatkan pemahaman dan kesadaran kolektif akan pentingnya pencegahan stunting.",
+  },
+  {
+    id: "dampak-stunting",
+    question: "Dampak apa yang akan terjadi pada anak bila stunting?",
+    answer:
+      "Anak yang mengalami stunting berisiko mengalami keterlambatan belajar, penurunan daya tahan tubuh, gangguan perkembangan otak, serta kesulitan bersaing di masa depan secara fisik maupun intelektual.",
+  },
+  {
+    id: "stunting-disembuhkan",
+    question: "Apakah stunting dapat disembuhkan dan pertumbuhan anak dapat kembali normal?",
+    answer:
+      "Stunting sulit disembuhkan sepenuhnya jika sudah lewat usia 2 tahun. Namun, dengan perbaikan nutrisi dan stimulasi yang konsisten, anak tetap bisa tumbuh lebih sehat dan produktif.",
+  },
+  {
+    id: "apa-itu-stunting",
+    question: "Apa itu stunting?",
+    answer:
+      "Stunting adalah kondisi gagal tumbuh pada anak balita akibat kekurangan gizi kronis, terutama dalam 1000 hari pertama kehidupan, yang menyebabkan tinggi badan di bawah standar dan gangguan perkembangan.",
+  },
+  {
+    id: "pencegahan-kehamilan",
+    question: "Bagaimana pencegahan stunting pada masa kehamilan?",
+    answer:
+      "Pencegahan saat hamil mencakup konsumsi gizi lengkap, rutin periksa kehamilan, minum tablet tambah darah, hindari zat berbahaya seperti rokok dan alkohol, serta menjaga kesehatan mental dan fisik ibu.",
+  },
+  {
+    id: "faktor-paling-berpengaruh",
+    question: "Faktor apa yang paling berpengaruh terhadap terjadinya stunting?",
+    answer:
+      "Faktor utama penyebab stunting adalah kekurangan gizi jangka panjang, pola makan yang tidak sesuai usia, infeksi berulang, sanitasi buruk, dan kurangnya pengetahuan orang tua tentang perawatan anak.",
+  },
+  {
+    id: "peran-posyandu",
+    question: "Apa peran Posyandu dalam pencegahan stunting?",
+    answer:
+      "Posyandu memiliki peran penting dalam memantau pertumbuhan anak, memberikan imunisasi, edukasi gizi kepada ibu, mendeteksi dini masalah kesehatan, serta menghubungkan masyarakat dengan layanan kesehatan.",
+  },
+]
+
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#E0F7FA" }}>
@@ -67,20 +104,18 @@ export default function StuntingLandingPage() {
             </p>
           </div>
 
-          {/* Poster Image */}
           <div className="flex justify-center mb-8">
-            <div className="w-full">
   <Image
     src="/images/poster-2.jpg"
     alt="Poster Penyuluhan Stunting - Panduan Pencegahan untuk Ibu dan Bayi"
     width={1041}
     height={736}
-    className="w-full h-auto object-cover"
+    className="w-full h-auto object-contain"
     priority
   />
 </div>
 
-          </div>
+
 
           {/* Statistics Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -155,13 +190,7 @@ export default function StuntingLandingPage() {
               <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3">
                 Cari Puskesmas Terdekat
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-teal-600 text-teal-600 hover:bg-teal-50 px-8 py-3 bg-transparent"
-              >
-                Download Panduan
-              </Button>
+             
             </div>
           </div>
         </div>
