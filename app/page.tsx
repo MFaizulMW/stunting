@@ -4,7 +4,7 @@ import React from "react"
 import Image from "next/image"
 
 
-import { Baby, Heart, Users, Utensils, Shield, BookOpen } from "lucide-react"
+import { Baby, Heart, Users, Utensils, Shield, BookOpen, Activity, Stethoscope } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -198,77 +198,83 @@ export default function StuntingLandingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white/50">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <BookOpen className="h-12 w-12 text-teal-600 mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pertanyaan Seputar Stunting</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Temukan jawaban untuk pertanyaan umum tentang pencegahan stunting
-            </p>
-          </div>
+          {/* Background hanya untuk area ini */}
+          <div className="bg-white/50 rounded-2xl p-8 md:p-12">
+            <div className="text-center mb-12">
+              <BookOpen className="h-12 w-12 text-teal-600 mx-auto mb-4" />
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pertanyaan Seputar Stunting</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Temukan jawaban untuk pertanyaan umum tentang pencegahan stunting
+              </p>
+            </div>
 
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqData.map((faq) => (
-                <AccordionItem key={faq.id} value={faq.id} className="bg-white rounded-lg shadow-sm border-0">
-                  <AccordionTrigger
-                    className="px-6 py-4 text-left hover:no-underline rounded-lg"
-                    style={{
-                      backgroundColor: "#FFE0B2",
-                      color: "#4E342E",
-                    }}
-                  >
-                    <span className="font-semibold text-base md:text-lg pr-4">{faq.question}</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 py-4 text-gray-700 leading-relaxed">{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqData.map((faq) => (
+                  <AccordionItem key={faq.id} value={faq.id} className="bg-white rounded-lg shadow-sm border-0">
+                    <AccordionTrigger
+                      className="px-6 py-4 text-left hover:no-underline rounded-lg"
+                      style={{
+                        backgroundColor: "#FFE0B2",
+                        color: "#4E342E",
+                      }}
+                    >
+                      <span className="font-semibold text-base md:text-lg pr-4">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 py-4 text-gray-700 leading-relaxed">{faq.answer}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
       <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
-            <Utensils className="h-16 w-16 text-teal-600 mx-auto mb-6" />
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Mulai Langkah Pencegahan Sekarang</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Konsultasikan dengan tenaga kesehatan terdekat untuk mendapatkan panduan yang tepat sesuai kondisi ibu dan
-              bayi.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-  size="lg"
-  className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3"
-  onClick={handleFindNearbyPuskesmas}
->
-  Cari Puskesmas Terdekat
-</Button>
+  <div className="container mx-auto px-4 text-center">
+    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
+      <Stethoscope className="h-16 w-16 text-teal-600 mx-auto mb-6" />
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Mulai Langkah Pencegahan Sekarang</h2>
+      <p className="text-lg text-gray-600 mb-8">
+        Konsultasikan dengan tenaga kesehatan terdekat untuk mendapatkan panduan yang tepat sesuai kondisi ibu dan bayi.
+      </p>
 
-<Button
-    size="lg"
-    variant="outline"
-  className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3"
+<div className="flex justify-center gap-4">
+  {/* Tombol Cari Puskesmas */}
+  <button
+    className="inline-flex items-center justify-center px-6 py-3 w-64 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
+    onClick={handleFindNearbyPuskesmas}
+  >
+    Cari Puskesmas Terdekat
+  </button>
+
+  {/* Tombol Kritik & Saran */}
+  <a
+    href="https://forms.gle/dzziPiEwTSFdHzAq7"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center px-6 py-3 w-64 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
   >
     Kritik & Saran
-  </Button>
+  </a>
 
-  <Button
-    size="lg"
-    variant="outline"
-  className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3"
+  {/* Tombol Konsultasi WA */}
+  <a
+    href="https://wa.me/6281326834466?text=Halo%20saya%20ingin%20konsultasi%20kesehatan%20lebih%20lanjut."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center px-6 py-3 w-64 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
   >
     Konsultasi Kesehatan Online
-  </Button>
+  </a>
+</div>
+    </div>
+  </div>
+</section>
 
-             
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
