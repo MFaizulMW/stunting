@@ -242,10 +242,10 @@ export default function StuntingLandingPage() {
         Konsultasikan dengan tenaga kesehatan terdekat untuk mendapatkan panduan yang tepat sesuai kondisi ibu dan bayi.
       </p>
 
-<div className="flex justify-center gap-4">
+<div className="flex flex-wrap justify-center gap-4">
   {/* Tombol Cari Puskesmas */}
   <button
-    className="inline-flex items-center justify-center px-6 py-3 w-64 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
+    className="flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
     onClick={handleFindNearbyPuskesmas}
   >
     Cari Puskesmas Terdekat
@@ -253,24 +253,27 @@ export default function StuntingLandingPage() {
 
   {/* Tombol Kritik & Saran */}
   <a
-    href="https://forms.gle/dzziPiEwTSFdHzAq7"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center px-6 py-3 w-64 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
-  >
-    Kritik & Saran
-  </a>
+  href="https://forms.gle/dzziPiEwTSFdHzAq7"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-center text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
+>
+  Kritik & Saran
+</a>
+
 
   {/* Tombol Konsultasi WA */}
   <a
     href="https://wa.me/6281326834466?text=Halo%20saya%20ingin%20konsultasi%20kesehatan%20lebih%20lanjut."
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center px-6 py-3 w-64 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
+    className="flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
   >
     Konsultasi Kesehatan Online
   </a>
 </div>
+
+
     </div>
   </div>
 </section>
