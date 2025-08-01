@@ -233,50 +233,51 @@ export default function StuntingLandingPage() {
       </section>
 
       {/* Call to Action */}
+  {/* Call to Action */}
       <section className="py-16">
-  <div className="container mx-auto px-4 text-center">
-    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
-      <Stethoscope className="h-16 w-16 text-teal-600 mx-auto mb-6" />
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Mulai Langkah Pencegahan Sekarang</h2>
-      <p className="text-lg text-gray-600 mb-8">
-        Konsultasikan dengan tenaga kesehatan terdekat untuk mendapatkan panduan yang tepat sesuai kondisi ibu dan bayi.
-      </p>
+        <div className="container mx-auto px-4">
+          {/* Background sama dengan FAQ section */}
+          <div className="bg-white/50 rounded-2xl p-8 md:p-12">
+            <div className="text-center">
+              <Stethoscope className="h-16 w-16 text-teal-600 mx-auto mb-6" />
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Mulai Langkah Pencegahan Sekarang</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Konsultasikan dengan tenaga kesehatan terdekat untuk mendapatkan panduan yang tepat sesuai kondisi ibu dan bayi.
+              </p>
 
-<div className="flex flex-wrap justify-center gap-4">
-  {/* Tombol Cari Puskesmas */}
-  <button
-    className="flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
-    onClick={handleFindNearbyPuskesmas}
-  >
-    Cari Puskesmas Terdekat
-  </button>
+              <div className="flex flex-wrap justify-center gap-4">
+                {/* Tombol Cari Puskesmas */}
+                <button
+                  className="flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
+                  onClick={handleFindNearbyPuskesmas}
+                >
+                  Cari Puskesmas Terdekat
+                </button>
 
-  {/* Tombol Kritik & Saran */}
-  <a
-  href="https://forms.gle/dzziPiEwTSFdHzAq7"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-center text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
->
-  Kritik & Saran
-</a>
+                 {/* Tombol Kritik & Saran */}
+        <a
+          href="https://forms.gle/dzziPiEwTSFdHzAq7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300 text-center"
+        >
+          Kritik & Saran
+        </a>
 
-
-  {/* Tombol Konsultasi WA */}
-  <a
-    href="https://wa.me/6281326834466?text=Halo%20saya%20ingin%20konsultasi%20kesehatan%20lebih%20lanjut."
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
-  >
-    Konsultasi Kesehatan Online
-  </a>
-</div>
-
-
-    </div>
-  </div>
-</section>
+                {/* Tombol Konsultasi WA */}
+                <a
+                  href="https://wa.me/6281326834466?text=Halo%20saya%20ingin%20konsultasi%20kesehatan%20lebih%20lanjut."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-[200px] max-w-[250px] px-6 py-3 text-white bg-teal-600 hover:bg-teal-700 rounded-lg text-base font-medium shadow-md transition duration-300"
+                >
+                  Konsultasi Kesehatan Online
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Footer */}
