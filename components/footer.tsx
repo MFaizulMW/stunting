@@ -39,43 +39,36 @@ export default function Footer() {
         </div>
 
         {/* Partners Section */}
-        <div className="mt-8 border-t border-gray-700 pt-8">
-          <p className="text-sm text-gray-400 mb-4">
-            Layanan Promosi Kesehatan ini kerja sama Biddokkes Polda DIY dan Kemenag Kota Yogyakarta:
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            {/* Logo Biddokkes */}
-            <a href="https://polda-diy.go.id/biddokes/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-              <Image
-                src="/images/biddokes.png"
-                alt="Logo Biddokkes Polda DIY"
-                width={64}
-                height={64}
-                className="h-16 w-16 mb-2 object-contain"
-              />
-             
-            </a>
+       {/* Partners Section */}
+<div className="mt-8 border-t border-gray-700 pt-8">
+  <p className="text-sm text-gray-400 mb-4">
+    Layanan Promosi Kesehatan ini kerja sama Biddokkes Polda DIY dan Kemenag Kota Yogyakarta:
+  </p>
+  <div className="flex flex-row flex-nowrap items-center justify-center gap-6">
+    {/* Logo Biddokkes */}
+    <a href="https://polda-diy.go.id/biddokes/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+      <Image
+        src="/images/biddokes.png"
+        alt="Logo Biddokkes Polda DIY"
+        width={64}
+        height={64}
+        className="h-16 w-16 mb-2 object-contain"
+      />
+    </a>
 
-            {/* Logo Kemenag */}
-            <a href="https://diy.kemenag.go.id/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-              <Image
-                src="/images/kemenag.png"
-                alt="Logo Kemenag Kota Yogyakarta"
-                width={64}
-                height={64}
-                className="h-16 w-16 mb-2 object-contain"
-              />
-            
-            </a>
-          </div>
-        </div>
+    {/* Logo Kemenag */}
+    <a href="https://diy.kemenag.go.id/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+      <Image
+        src="/images/kemenag.png"
+        alt="Logo Kemenag Kota Yogyakarta"
+        width={64}
+        height={64}
+        className="h-16 w-16 mb-2 object-contain"
+      />
+    </a>
+  </div>
+</div>
 
-        {/* Copyright & Legal */}
-        <div className="mt-8">
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} StuntingHero. All rights reserved.
-          </p>
-        </div>
       </div>
     </footer>
   );
